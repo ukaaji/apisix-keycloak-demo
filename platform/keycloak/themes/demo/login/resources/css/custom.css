@@ -1,0 +1,116 @@
+.login-pf body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .login-pf body {
+    background-color: #171717;
+  }
+
+  .login-pf-page #kc-header-wrapper {
+    font-weight: unset;
+    padding: 20px 60px 0 0;
+    color: unset;
+    letter-spacing: unset;
+  }
+}
+
+.login-pf input:focus {
+  outline: none;
+}
+
+.login-pf body .login-pf-page {
+  background-color: #262626;
+  box-shadow: var(--pf-global--BoxShadow--lg);
+}
+
+.login-pf body .login-pf-page #input-error {
+  color: var(--pf-global--danger-color--100);
+}
+
+.login-pf-page .login-pf-page-header {
+  width: 40rem;
+  margin-bottom: unset;
+}
+
+.login-pf-page #kc-header-wrapper {
+  text-transform: unset;
+  letter-spacing: unset;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: unset;
+  padding-right: 0.75rem;
+}
+
+.login-pf-page #kc-header-wrapper::before {
+  content: "";
+  width: 12rem;
+  height: 3.6rem;
+  display: block;
+  margin-right: 0.5rem;
+}
+
+.login-pf-page .card-pf {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: unset;
+  border-top: unset;
+  padding-bottom: 3rem;
+  box-shadow: unset;
+}
+
+.login-pf-page .card-pf .login-pf-header {
+  display: none;
+}
+
+#kc-content {
+  max-width: 18rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#kc-content a {
+  color: white;
+}
+
+#kc-content-wrapper .form-group {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+#kc-content-wrapper .form-group.login-pf-settings {
+  margin-top: 0;
+}
+
+#kc-content-wrapper .form-group .pf-c-form__label {
+  color: white;
+}
+
+#kc-content-wrapper .form-group .pf-c-form-control {
+  height: 1.75rem;
+  color: white;
+  background-color: rgba(85, 85, 85, 0.56);
+  border: none;
+}
+
+#kc-content-wrapper .form-group .pf-c-input-group {
+  background-color: unset;
+}
+
+#kc-content-wrapper .pf-c-button.pf-m-primary {
+  margin-top: 2rem;
+  background-color: #525252;
+}
+
+#kc-content-wrapper .pf-c-button.pf-m-control {
+  display: none;
+}
+
+#kc-info #kc-info-wrapper {
+  background-color: unset;
+}
