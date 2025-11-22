@@ -1,3 +1,10 @@
+response_rewrite_disable_cache: &response_rewrite_disable_cache
+  "headers": {
+    "Cache-Control": "no-cache, no-store, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0"
+  }
+
 routes:
   # IAM         
   - id: iam-service
@@ -26,7 +33,7 @@ routes:
 
   # default forward
   - id: root-forward
-    uri: /*
+    uri: /
     plugins:
       redirect:
         uri: /resource1/
@@ -40,6 +47,7 @@ routes:
         "resource-one-service:80": 1
       type: roundrobin
     plugins:
+      response-rewrite: *response_rewrite_disable_cache
       proxy-rewrite:
         regex_uri:
             - "^/resource1(.*)$"

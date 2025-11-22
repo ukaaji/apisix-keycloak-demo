@@ -21,3 +21,4 @@ plugins:
   - redirect
   - syslog
   - prometheus
+  - response-rewrite
