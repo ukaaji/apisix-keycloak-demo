@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>APISIX + Keycloak Demo Resource 3</title>
+  <title>APISIX + Keycloak Demo Access Denied</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       max-width: 800px;
       margin: 50px auto;
       padding: 20px;
-      background-color: #20a53dff;
+      background-color: #2f92e4ff;
     }
 
     .container {
@@ -41,8 +41,8 @@
       color: #155724;
     }
 
-    .logout-btn {
-      background: #dc3545;
+    .login-btn {
+      background: #4f80d4ff;
       color: white;
       padding: 10px 20px;
       border: none;
@@ -52,8 +52,8 @@
       display: inline-block;
     }
 
-    .logout-btn:hover {
-      background: #c82333;
+    .login-btn:hover {
+      background: #75a8d4ff;
     }
   </style>
 </head>
@@ -61,30 +61,11 @@
 <body>
   <div class="container">
     <div class="header">
-      <h1>Resource 3</h1>
-    </div>
-
-    <div class="info-box success">
-      <h3>✅ Authentication Successful!</h3>
-      <p>If you can see this page, it means:</p>
-      <ul>
-        <li>APISIX successfully redirected you to Keycloak for login</li>
-        <li>Keycloak authenticated your credentials</li>
-        <li>APISIX received the callback and created a session</li>
-        <li>You are now accessing this protected frontend through APISIX</li>
-      </ul>
-    </div> 
-
-    <div class="info-box">
-      <h3>🌐 Other Resources</h3>
-      <ul>
-        <li><strong>Resource 1:</strong> <a href="http://localhost/resource1/">http://localhost/resource1/</a></li>
-        <li><strong>Resource 2:</strong> <a href="http://localhost/resource2/">http://localhost/resource2/</a></li>
-      </ul>
+      <h1>Resource 3 - Access Denied</h1>
     </div>
 
     <div style="text-align: center; margin-top: 30px;">
-      <a href="/logout" class="logout-btn">🚪 Logout</a>
+      <a href="/logout" class="login-btn">Login</a>
     </div>
   </div>
 </body>

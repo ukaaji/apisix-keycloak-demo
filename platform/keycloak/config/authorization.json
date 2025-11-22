@@ -1,0 +1,106 @@
+{
+  "allowRemoteResourceManagement": true,
+  "policyEnforcementMode": "ENFORCING",
+  "resources": [
+    {
+      "name": "resource-one",
+      "ownerManagedAccess": false,
+      "displayName": "Resource 1",
+      "attributes": {},
+      "uris": [
+        "/resource1/*"
+      ],
+      "icon_uri": ""
+    },
+    {
+      "name": "resource-two",
+      "ownerManagedAccess": false,
+      "displayName": "Resource 2",
+      "attributes": {},
+      "uris": [
+        "/resource2/*"
+      ],
+      "icon_uri": ""
+    },
+    {
+      "name": "resource-three",
+      "ownerManagedAccess": false,
+      "displayName": "Resource 3",
+      "attributes": {},
+      "uris": [
+        "/resource3/*"
+      ],
+      "icon_uri": ""
+    }
+  ],
+  "policies": [
+    {
+      "name": "resource-one-user",
+      "description": "",
+      "type": "role",
+      "logic": "POSITIVE",
+      "decisionStrategy": "UNANIMOUS",
+      "config": {
+        "fetchRoles": "true",
+        "roles": "[{\"id\":\"user\",\"required\":false}]"
+      }
+    },
+    {
+      "name": "resource-two-user",
+      "description": "",
+      "type": "role",
+      "logic": "POSITIVE",
+      "decisionStrategy": "UNANIMOUS",
+      "config": {
+        "fetchRoles": "true",
+        "roles": "[{\"id\":\"user\",\"required\":false}]"
+      }
+    },
+    {
+      "name": "resource-three-user",
+      "description": "",
+      "type": "role",
+      "logic": "POSITIVE",
+      "decisionStrategy": "UNANIMOUS",
+      "config": {
+        "fetchRoles": "false",
+        "roles": "[{\"id\":\"user\",\"required\":false}]"
+      }
+    },
+    {
+      "name": "resource-one-access",
+      "description": "",
+      "type": "resource",
+      "logic": "POSITIVE",
+      "decisionStrategy": "UNANIMOUS",
+      "config": {
+        "resources": "[\"resource-one\"]",
+        "applyPolicies": "[\"resource-one-user\"]"
+      }
+    },
+    {
+      "name": "resource-two-access",
+      "description": "",
+      "type": "resource",
+      "logic": "POSITIVE",
+      "decisionStrategy": "UNANIMOUS",
+      "config": {
+        "resources": "[\"resource-two\"]",
+        "applyPolicies": "[\"resource-two-user\"]"
+      }
+    },
+    {
+      "name": "resource-three-access",
+      "description": "",
+      "type": "resource",
+      "logic": "POSITIVE",
+      "decisionStrategy": "UNANIMOUS",
+      "config": {
+        "resources": "[\"resource-three\"]",
+        "applyPolicies": "[\"resource-three-user\"]"
+      }
+    }
+  ],
+  "scopes": [],
+  "decisionStrategy": "UNANIMOUS"
+}

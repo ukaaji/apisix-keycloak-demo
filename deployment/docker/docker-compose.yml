@@ -11,7 +11,7 @@ services:
       - BASE_URL=http://localhost
     volumes:
       - ../../platform/apisix/config/config.yaml:/usr/local/apisix/conf/config.yaml
-      - ../../platform/apisix/config/apisix.yaml:/usr/local/apisix/conf/apisix.yaml
+      - ../../platform/apisix/config/apisix-final.yaml:/usr/local/apisix/conf/apisix.yaml
     ports:
       - "80:9080"
     depends_on:
