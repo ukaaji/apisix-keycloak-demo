@@ -3,7 +3,7 @@ services:
   api-gateway-service:
     build:
       context: ../../platform/apisix
-    container_name: api_gateway_service
+    container_name: api-gateway-service
     environment:
       - APISIX_SESSION_SECRET=${APISIX_SESSION_SECRET}
       - KEYCLOAK_URL=http://iam-service:8080/iam
@@ -27,7 +27,7 @@ services:
     build:
       context: ../../platform/keycloak
       dockerfile: Dockerfile
-    container_name: iam_service
+    container_name: iam-service
     environment:
       - KEYCLOAK_ADMIN=admin
       - KEYCLOAK_ADMIN_PASSWORD=admin
@@ -44,7 +44,7 @@ services:
 
   iam-db-service:
     image: postgres:14
-    container_name: iam_db_service
+    container_name: iam-db-service
     environment:
       - POSTGRES_USER=keycloak
       - POSTGRES_PASSWORD=1234
@@ -55,16 +55,19 @@ services:
   # Resources
   resource-one-service:
     image: nginx:alpine
+    container_name: resource-one-service
     volumes:
       - ../../resources/resource1:/usr/share/nginx/html
   
   resource-two-service:
     image: nginx:alpine
+    container_name: resource-two-service
     volumes:
       - ../../resources/resource2:/usr/share/nginx/html
 
   resource-three-service:
     image: nginx:alpine
+    container_name: resource-three-service
     volumes:
       - ../../resources/resource3:/usr/share/nginx/html
 
