@@ -27,28 +27,30 @@ I use several APISIX plugins to achieve this integration and to manage basic rou
 The demo setup consists of the following components that are orchestrated using Docker Compose:
 
 - **api-gateway-service** - Apache APISIX acting as the API Gateway.
-- **iam-service with iam-db-service** - Keycloak server for identity and access management including a Postgresql database.
+- **iam-service with iam-db-service** - Keycloak server for identity and access management, including a Postgresql database.
 - **resource-one-service** - A sample backend service protected by APISIX and Keycloak.
 - **resource-two-service** - Another sample backend service protected by APISIX and Keycloak.
 - **resource-three-service** - A third sample backend service protected by APISIX and Keycloak.
 
-The three resources are simple html pages served via Nginx. But you can imagine those to be endpoints of an API, AI services, storage services, etc.
+The three resources are simple HTML pages served via Nginx. But you can imagine those to be endpoints of an API, AI services, storage services, etc.
 
 ### Running the Demo
 
 To run the demo, you need to have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) installed on your machine. On Windows, you can use [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
-The you can simply run `./scripts/start.sh` from the project root directory to start all services. If you are on Windows, I recomment the Git Bash terminal that comes with [Git for Windows](https://gitforwindows.org/) to run the script.
+You can simply run `./scripts/start.sh` from the project root directory to start all services. If you are on Windows, I recommend the Git Bash terminal that comes with [Git for Windows](https://gitforwindows.org/) to run the script.
 
-After the services are started, you can access the demo using http://localhost. You will notice that nothing is accessible at first. You must first setup a Keycloak realm, client, roles, users and permissions. The [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/index.html) is a great resource to get started with Keycloak.
+After the services are started, you can access the demo using http://localhost. You will notice that nothing is accessible at first. You must first set up a Keycloak realm, client, roles, users and permissions. The [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/index.html) is a great resource to get started with Keycloak.
 
-But I also recorded a Youtube Video in which I explain in-depth how to setup APISIX and Keycloak to secure your services. You can find the video below.
+But I also recorded a YouTube video in which I explain in-depth how to set up APISIX and Keycloak to secure your services. You can find the video below.
 
-## Youtube Video
+## Youtube Videos
 
-In this Youtube video I explain how to setup APISIX and Keycloak to secure your services:
+In these YouTube videos, I explain how to set up APISIX and Keycloak to secure your services:
 
-TODO -> Insert Link
+[Modern Auth with Keycloak and APISIX - Part 1](https://www.youtube.com/watch?v=viwfha1gQgg&t=335s)
+
+[Modern Auth with Keycloak and APISIX - Part 2](https://www.youtube.com/watch?v=q0ryuxMFYeQ)
 
 The topics I cover are things I learned by studying the documentation and a lot of trial and error. I hope the video saves you some time and helps you to get started quickly.
 
